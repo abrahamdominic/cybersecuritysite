@@ -1,3 +1,8 @@
+body {
+    font-family: inherit;
+   
+}
+
 p.hack {
     margin-top: 5px;
     text-align: center;
@@ -14,6 +19,31 @@ marquee.hack {
     font-size: 15px;
     background-color: green;
 
+}
+img.guy {
+    height: 150px;
+    width: 150px;
+    align-items: center;
+}
+
+p.cyber {
+    background-color: rgb(201, 43, 43);
+    font-size: 5px;
+    color: rgb(238, 224, 224);
+    border: 1px solid grey;
+    border-width: 1px;
+}
+
+span.niger {
+    color: rgb(17, 66, 10);
+    font-size: 25px;
+    font-family: monospace;
+    
+}
+
+li, p, span, a:hover {
+    color: green;
+   
 }
 
 hr.line {
