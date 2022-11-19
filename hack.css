@@ -1,0 +1,54 @@
+body {
+    font-family: inherit;
+   
+}
+
+p.hack {
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+marquee.hack {
+    border: 5px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 15px;
+    background-color: green;
+
+}
+img.guy {
+    height: 150px;
+    width: 150px;
+    align-items: center;
+}
+
+p.cyber {
+    background-color: rgb(201, 43, 43);
+    font-size: 20px;
+    color: rgb(238, 224, 224);
+    border: 1px solid grey;
+    border-width: 2px;
+}
+
+span.niger {
+    color: rgb(17, 66, 10);
+    font-size: 25px;
+    font-family: monospace;
+    
+}
+
+li, p, span, a:hover {
+    color: green;
+   
+}
+
+hr.line {
+    size: 53px;
+    color: blue;
+}
+
+footer
