@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	
+	<script>
+	
+	/* Add "https://api.ipify.org?format=json" statement
+			this will communicate with the ipify servers in
+			order to retrieve the IP address $.getJSON will
+			load JSON-encoded data from the server using a
+			GET HTTP request */
+				
+	$.getJSON("https://api.ipify.org?format=json", function(data) {
+		
+		// Setting text of element P with id gfg
+		$("#gfg").html(data.ip);
+	})
+	</script>
     <link rel="stylesheet" href="hack.css">
     
     <title>Hacking E - library</title>
@@ -45,6 +63,17 @@
     <center><p class="hacking">Scripts</p></center>
 
 </body>
+    
+    
 
-<footer> <p class="hack">&#169;&#174; 2022 Nigeria Cyber Security Aspirant </p> </footer>
+<footer>
+    <p><center>
+		<h1>Nigeria Cyber Security Aspirant</h1>
+		<h3>Your Public IP Address of is:</h3>
+		<p id="gfg"></p>
+
+        </center></p>
+    <p class="hack">&#169;&#174; 2022 Nigeria Cyber Security Aspirant </p>
+    
+    </footer>
 </html>
