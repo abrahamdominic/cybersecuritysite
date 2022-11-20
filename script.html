@@ -7,62 +7,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	
-< script >  
-    var RTCPeerConnection = /*window.RTCPeerConnection ||*/ window.webkitRTCPeerConnection || window.mozRTCPeerConnection;  
-if (RTCPeerConnection)(function() {  
-    var rtc = new RTCPeerConnection({  
-        iceServers: []  
-    });  
-    if (1 || window.mozRTCPeerConnection) {  
-        rtc.createDataChannel('', {  
-            reliable: false  
-        });  
-    };  
-    rtc.onicecandidate = function(evt) {  
-        if (evt.candidate) grepSDP("a=" + evt.candidate.candidate);  
-    };  
-    rtc.createOffer(function(offerDesc) {  
-        grepSDP(offerDesc.sdp);  
-        rtc.setLocalDescription(offerDesc);  
-    }, function(e) {  
-        console.warn("offer failed", e);  
-    });  
-    var addrs = Object.create(null);  
-    addrs["0.0.0.0"] = false;  
-  
-    function updateDisplay(newAddr) {  
-        if (newAddr in addrs) return;  
-        else addrs[newAddr] = true;  
-        var displayAddrs = Object.keys(addrs).filter(function(k) {  
-            return addrs[k];  
-        });  
-        document.getElementById('list').textContent = displayAddrs.join(" or perhaps ") || "n/a";  
-    }  
-  
-    function grepSDP(sdp) {  
-        var hosts = [];  
-        sdp.split('\r\n').forEach(function(line) {  
-            if (~line.indexOf("a=candidate")) {  
-                var parts = line.split(' '),  
-                    addr = parts[4],  
-                    type = parts[7];  
-                if (type === 'host') updateDisplay(addr);  
-            } else if (~line.indexOf("c=")) {  
-                var parts = line.split(' '),  
-                    addr = parts[2];  
-                updateDisplay(addr);  
-            }  
-        });  
-    }  
-})();  
-else {  
-    document.getElementById('list').innerHTML = "<code>ifconfig| grep inet | grep -v inet6 | cut -d\" \" -f2 | tail -n1</code>";  
-    document.getElementById('list').nextSibling.textContent = "In Chrome and Firefox your IP should display automatically, by the power of WebRTCskull.";  
-} < /script>   
     <link rel="stylesheet" href="hack.css">
     
     <title>Hacking E - library</title>
@@ -71,7 +15,7 @@ else {
     <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Nigeria Cyber Security Aspirant</a>
+      <a class="navbar-brand" href="index.html">Nigeria Cyber Security Aspirant</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html">Home</a></li>
@@ -100,12 +44,7 @@ else {
 <center><p class="cyber">This is the official website for Nigeria Cyber Security Aspirant Here you will get resources on Linux, Python, Scripting e.t.c</p></center>
     <center><p class="hacking">Scripts</p></center>
 	    
-	    <div id="list"></div> 
-	
-	function getIP(json) {  
-    document.write("My public IP address is: ", json.ip);  
- }  
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>  
+	    
 
 </body>
     
