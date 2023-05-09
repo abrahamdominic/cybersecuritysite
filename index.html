@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="hack.css">
+    <link rel="stylesheet" href="grid.css">
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+                               
     
     <title>Hacking E - library</title>
 </head>
@@ -19,12 +23,12 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="python.html">Python Courses</a></li>
-      <li><a href="frontend.html">Front-end Dev</a></li>
-        <li><a href="hack.html">Hacking</a></li>
-      <li><a href="backend.html">Backend</a></li>
-        <li><a href="script.html">Scripts</a></li>
-        
+      <li><a href="linux/linux.html">Linux</a></li>
+      <li><a href="frontend.html">Scripting</a></li>
+        <li><a href="Cyber/hack.html">Cybersecurity</a></li>
+      <li><a href="Programming/Program.html">Programming</a></li>
+                <li><a href="script/script.html">Scripts & Tools</a></li>
+
         <ul class="nav navbar-nav navbar-right">
       <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -50,15 +54,104 @@
 
 
     <center><p class="hacking">Home Page</p></center>
-    <p class="text"><li><a href="python.html"> Python Course </a></li></p><hr class="line">
-<p class="text"><li><a href="frontend.html">Front-end Dev</a></li></p><hr class="line">
-<p class="text"><li><a href="hack.html">Hacking</a></p></li><hr class="line">
-<p class="text"><li><a href="backend.html">Backend Dev </a></li></p><hr class="line">
-<p class="text"><li><a href="script.html">Scripts </a></li></p><hr class="line">
+   
+<div class="container">
     
+  <ul class="cards">
+      <li class="card">
+          <div>
+              <h3 class="card-title">Linux</h3>
+              <div class="card-content">
+<p><center><img src="./img/linux.jpeg" alt="Linux" width="100%" height="100%" ></center></p>
+                  <p> Linux is an open-source operating system for servers, computers, mainframes, mobile systems, and embedded systems.</p>
+              </div>
+          </div>
+          <div class="card-link-wrapper">
+              <a href="linux/linux.html" class="card-link">Learn More</a>
+          </div>
+      </li>
+      <li class="card">
+          <div>
+              <h3 class="card-title">Scripting</h3>
+              <div class="card-content">
+<p><center><img src="./img/script.jpeg" alt="Scripting" width="100%" height="100%" ></center></p>
 
+                  <p>Scripting is primarily used to automate tasks for websites and web applications while using an existing program. it is useful for extracting information from a dataset</p>
+              </div>
+          </div>
+          <div class="card-link-wrapper">
+              <a href="script.html" class="card-link">Learn More</a>
+          </div>
+      </li>
+      <li class="card">
+          <div>
+              <h3 class="card-title">Cyber Security</h3>
+              <div class="card-content">
+<p><center><img src="./img/cyber.jpeg" alt="Cybersecurity" width="100%" height="100%" ></center></p>
+
+                  <p>Cybersecurity is the practice of protecting critical systems and sensitive information from digital attacks.</p>
+              </div>
+          </div>
+          <div class="card-link-wrapper">
+              <a href="cyber/cyber.html" class="card-link">Learn More</a>
+          </div>
+      </li>
+      <li class="card">
+          <div>
+              <h3 class="card-title">Programming</h3>
+              <div class="card-content">
+<p><center><img src="./img/prog.jpeg" alt="Programming" width="100%" height="100%" ></center></p>
+
+                  <p>Programming is the process of creating a set of instructions that tell a computer how to perform a task.</p>
+              </div>
+          </div>
+          <div class="card-lirogramming/nk-wrapper">
+              <a href="programming/Program.html" class="card-link">Learn More</a>
+          </div>
+      </li>
+      
+      <li class="card">
+          <div>
+              <h3 class="card-title">Abraham Dominic Newton</h3>
+              <div class="card-content">
+                  <p>  .</p>
+              </div>
+          </div>
+          <div class="card-link-wrapper">
+              <a href="" class="card-link">Learn More</a>
+          </div>
+      </li>
+  </ul>
+</div>
+      
 
 </body>
 
-<footer> <p class="hack">&#169;&#174;  Nigeria Cyber Security Aspirant </p> </footer>
+<script>
+  /* Add "https://api.ipify.org?format=json" statement
+             this will communicate with the ipify servers in
+             order to retrieve the IP address $.getJSON will
+             load JSON-encoded data from the server using a
+             GET HTTP request */
+
+              
+
+  $.getJSON("https://api.ipify.org?format=json", function(data) {
+
+       
+
+      // Setting text of element P with id gfg
+
+      $("#gfg").html(data.ip);
+
+  })
+
+  </script>
+
+<center><h3 class="address">Your Public IP Address is:</h3>
+
+      <p class="ip" id="gfg"></p></center>
+
+      <footer> <p class="hack">&#169;&#174;  <script>document.write(new Date().getFullYear())</script>   Nigeria Cyber Security Aspirant </p> </footer>
+
 </html>
